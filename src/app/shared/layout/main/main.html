@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<main>
+  <app-sidebar>
+    <div class="flex items-center justify-between mt-8 mb-6">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Fleet Inventory</h1>
+            <p class="text-gray-400 text-base">
+              Manage and track your premium automotive stock performance.
+            </p>
+        </div>
+        <button class="py-3 px-8 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 cursor-pointer" (click)="openForm()" ...> + Add New Car </button>
+
+       @if (showAddCar()) {
+            <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+            <div class="w-full max-w-2xl transform transition-all">
+                <app-add-car></app-add-car>
+            </div>
+            </div>
+        }
+    </div>
+    <app-cars-list></app-cars-list>
+  </app-sidebar>
+</main>
+<app-footer></app-footer>
