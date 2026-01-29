@@ -2,15 +2,23 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChang
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideStore } from '@ngrx/store';
+import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-
+import { provideHttpClient } from '@angular/common/http';
+import { carReducer } from './store/cars/cars.reducer';
+import * as carEffects from './store/cars/cars.effects';
+import * as brandEffects from './store/brands/brands.effects';
+import { brandReducer } from './store/brands/brands.reducer';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideHttpClient(),
     provideStore(),
-    provideEffects()
+    provideState('cars', carReducer),
+    provideState('brands', brandReducer),
+    provideEffects(carEffects),
+    provideEffects(brandEffects)
 ]
 };
