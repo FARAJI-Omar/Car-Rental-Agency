@@ -1,0 +1,146 @@
+{
+  "brands": [
+    {
+      "id": "1",
+      "title": "Peugeot"
+    },
+    {
+      "id": "2",
+      "title": "Renault"
+    },
+    {
+      "id": "3",
+      "title": "Tesla"
+    },
+    {
+      "id": "4",
+      "title": "Dacia"
+    },
+    {
+      "id": "5",
+      "title": "Mercedes-Benz"
+    }
+  ],
+  "cars": [
+    {
+      "id": "1",
+      "brand_id": "4",
+      "model": "3008",
+      "price": 280500,
+      "fuel": "diesel",
+      "image": "https://hips.hearstapps.com/mtg-prod/65dc63c4ef90350008a52d6b/2020-tesla-roadster-side-1.jpg",
+      "availability": false,
+      "saleDate": "2023-01-21"
+    },
+    {
+      "id": "2",
+      "brand_id": "3",
+      "model": "Model Y",
+      "price": 450000,
+      "fuel": "electrique",
+      "image": "https://hips.hearstapps.com/mtg-prod/65dc63c4ef90350008a52d6b/2020-tesla-roadster-side-1.jpg",
+      "availability": true,
+      "saleDate": "2024-05-12"
+    },
+    {
+      "id": "3",
+      "brand_id": "2",
+      "model": "2016",
+      "price": 160000,
+      "fuel": "diesel",
+      "image": "https://placehold.co/200",
+      "availability": false,
+      "saleDate": "2026-01-07"
+    },
+    {
+      "id": "4",
+      "brand_id": "5",
+      "model": "Soluta quia aut porr",
+      "price": 11,
+      "fuel": "essence",
+      "image": "https://placehold.co/200",
+      "availability": false,
+      "saleDate": "2001-05-19"
+    },
+    {
+      "id": "5",
+      "brand_id": "3",
+      "model": "tesla-z.20",
+      "price": 18,
+      "fuel": "electrique",
+      "image": "https://image.made-in-china.com/202f0j00OWFkdnlyKezo/Tesla-Cybertruck-High-Speed-Electrico-Auto-0km-Used-Car-New-Energy-Electric-Full-Size-Pickup.webp",
+      "availability": false,
+      "saleDate": "2000-04-04"
+    },
+    {
+      "id": "6",
+      "brand_id": "2",
+      "model": "2070-B",
+      "price": 84000,
+      "fuel": "electrique",
+      "image": "https://static-assets.tesla.com/configurator/compositor?context=design_studio_2?&bkba_opt=1&view=STUD_3QTR&size=600&model=my&options=$APBS,$IPB7,$PPSW,$SC04,$MDLY,$WY19P,$MTY46,$STY5S,$CPF0&crop=1150,647,390,180&",
+      "availability": true,
+      "saleDate": "2026-01-16"
+    },
+    {
+      "id": "7",
+      "brand_id": "3",
+      "model": "tyson-j50",
+      "price": 9000000,
+      "fuel": "electrique",
+      "image": "https://image.made-in-china.com/202f0j00OWFkdnlyKezo/Tesla-Cybertruck-High-Speed-Electrico-Auto-0km-Used-Car-New-Energy-Electric-Full-Size-Pickup.webp",
+      "availability": true,
+      "saleDate": "2026-01-07"
+    },
+    {
+      "id": "8",
+      "brand_id": "4",
+      "model": "Quis et aut mollit v",
+      "price": 46,
+      "fuel": "diesel",
+      "image": "Veniam vero odio di",
+      "availability": true,
+      "saleDate": "1980-06-06"
+    },
+    {
+      "id": "6501",
+      "brand_id": "1",
+      "model": "Reprehenderit ut dol",
+      "price": 89,
+      "fuel": "electrique",
+      "image": "https://static-assets.tesla.com/configurator/compositor?context=design_studio_2?&bkba_opt=1&view=STUD_3QTR&size=600&model=my&options=$APBS,$IPB7,$PPSW,$SC04,$MDLY,$WY19P,$MTY46,$STY5S,$CPF0&crop=1150,647,390,180&",
+      "availability": true,
+      "saleDate": "2002-05-09"
+    },
+    {
+      "id": "843f",
+      "brand_id": "4",
+      "model": "Sed expedita et quia",
+      "price": 7,
+      "fuel": "essence",
+      "image": "Id aliquid quam iure",
+      "availability": true,
+      "saleDate": "2021-08-01"
+    },
+    {
+      "id": "20ea",
+      "brand_id": "5",
+      "model": "Laboriosam voluptat",
+      "price": 18,
+      "fuel": "electrique",
+      "image": "Sed itaque consequun",
+      "availability": false,
+      "saleDate": "1991-02-23"
+    },
+    {
+      "id": "fd63",
+      "brand_id": "1",
+      "model": "Voluptatem eveniet ",
+      "price": 75,
+      "fuel": "diesel",
+      "image": "Excepturi nobis veni",
+      "availability": true,
+      "saleDate": "2009-07-19"
+    }
+  ]
+}
