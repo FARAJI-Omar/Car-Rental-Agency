@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal, computed } from '@angular/core';
+import { Component, inject, OnInit, signal, computed, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { CarActions } from '../../../store/cars/cars.actions';
@@ -21,6 +21,8 @@ export class CarsList implements OnInit {
   private store = inject(Store);
   private carService = inject(CarService); 
   private route  = inject(ActivatedRoute);
+
+  authenticated = input<boolean>(false);
 
   // UI State
   carToEdit = signal<Car | null>(null);

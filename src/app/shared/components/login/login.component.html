@@ -1,0 +1,195 @@
+<div
+    class="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 p-5 relative overflow-hidden">
+    <!-- Animated Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div
+            class="absolute top-0 -left-4 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-blob">
+        </div>
+        <div
+            class="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000">
+        </div>
+    </div>
+
+    <!-- Main Card Container with Split Design -->
+    <div
+        class="bg-white rounded-2xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col lg:flex-row relative z-10">
+
+        <!-- Left Side - Car Image & Branding -->
+        <div
+            class="lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-700 p-10 flex flex-col justify-center items-center text-white relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+
+            <!-- Brand Section -->
+            <div class="text-center mb-8 relative z-10">
+                <div class="inline-block mb-4">
+                    <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+                    </svg>
+                </div>
+                <h1 class="text-4xl font-bold mb-3 drop-shadow-lg">Premium Car Rental</h1>
+                <p class="text-blue-100 text-lg font-medium">Drive Your Dreams Today</p>
+            </div>
+
+            <!-- Car Illustration -->
+            <div class="relative w-full max-w-md">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&auto=format&fit=crop&q=80"
+                    alt="Luxury Car"
+                    class="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 rounded-lg" />
+                <!-- Glowing Effect -->
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent rounded-lg"></div>
+            </div>
+
+            <!-- Features -->
+            <div class="mt-8 space-y-3 text-sm relative z-10">
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-blue-50">24/7 Customer Support</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-blue-50">Premium Vehicle Fleet</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-blue-50">Best Price Guarantee</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="lg:w-1/2 p-10 lg:p-12">
+            <div class="max-w-md mx-auto">
+                <h2 class="text-gray-900 text-3xl font-bold mb-2">Welcome Back!</h2>
+                <p class="text-gray-500 mb-8">Sign in to manage your fleet</p>
+
+                <!-- Error Message -->
+                @if (error$ | async; as error) {
+                <div
+                    class="bg-red-50 border-l-4 border-red-500 text-red-700 px-4 py-3 rounded-lg mb-6 flex items-center gap-3">
+                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-sm font-medium m-0">{{ error }}</p>
+                </div>
+                }
+
+                <!-- Login Form -->
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-5">
+                    <!-- Username Field -->
+                    <div>
+                        <label for="username" class="block mb-2 text-gray-700 font-semibold text-sm">Username</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="username" formControlName="username"
+                                placeholder="Enter your username"
+                                class="w-full pl-12 pr-4 py-3.5 border-2 rounded-xl text-base transition-all bg-gray-50 focus:outline-none"
+                                [ngClass]="username?.invalid && username?.touched ? 'border-red-500 bg-red-50 focus:border-red-500 focus:ring-4 focus:ring-red-100' : 'border-gray-200 focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100'" />
+                        </div>
+                        @if (username?.invalid && username?.touched) {
+                        <span class="flex items-center gap-1 text-red-500 text-xs mt-2 font-medium">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Username is required
+                        </span>
+                        }
+                    </div>
+
+                    <!-- Password Field -->
+                    <div>
+                        <label for="password" class="block mb-2 text-gray-700 font-semibold text-sm">Password</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <input type="password" id="password" formControlName="password"
+                                placeholder="Enter your password"
+                                class="w-full pl-12 pr-4 py-3.5 border-2 rounded-xl text-base transition-all bg-gray-50 focus:outline-none"
+                                [ngClass]="password?.invalid && password?.touched ? 'border-red-500 bg-red-50 focus:border-red-500 focus:ring-4 focus:ring-red-100' : 'border-gray-200 focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100'" />
+                        </div>
+                        @if (password?.invalid && password?.touched) {
+                        <span class="flex items-center gap-1 text-red-500 text-xs mt-2 font-medium">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            @if (password?.errors?.['required']) {
+                            Password is required
+                            }
+                            @if (password?.errors?.['minlength']) {
+                            Password must be at least 6 characters
+                            }
+                        </span>
+                        }
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" [disabled]="isLoading$ | async"
+                        class="w-full py-4 px-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-bold text-base cursor-pointer transition-all flex justify-center items-center gap-3 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl hover:shadow-blue-500/50 disabled:opacity-60 disabled:cursor-not-allowed transform hover:-translate-y-0.5 mt-6">
+                        @if (isLoading$ | async) {
+                        <span class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full spinner"></span>
+                        <span>Logging in...</span>
+                        } @else {
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                        </svg>
+                        <span>Sign In</span>
+                        }
+                    </button>
+                </form>
+
+                <!-- Demo Credentials Hint -->
+                <div class="mt-8 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex-1">
+                            <p class="font-bold text-gray-900 text-sm mb-2">Demo Credentials</p>
+                            <div class="space-y-1.5">
+                                <p class="text-sm text-gray-600">
+                                    Username: <code
+                                        class="bg-white px-2.5 py-1 rounded-md font-mono text-blue-600 font-semibold text-xs border border-blue-200">emilys</code>
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    Password: <code
+                                        class="bg-white px-2.5 py-1 rounded-md font-mono text-blue-600 font-semibold text-xs border border-blue-200">emilyspass</code>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
