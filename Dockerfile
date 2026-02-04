@@ -12,13 +12,13 @@ RUN npm install
 COPY  . .
 
 # Generate the production static files in /dist
-RUN npm build --configuration=production
+RUN npm run build --configuration=production
 
 # Stage 2: The Server
 FROM nginx:alpine
 
 # Copy the compiled files from the build-stage to Nginx's hosting folder
-COPY --from=build-stage /app/dist/CAR-RENTAL-AGENCY/browser /usr/share/nginx/html
+COPY --from=build-stage /app/dist/car-rental-agency/browser /usr/share/nginx/html
 
 # Copy a custom config to handle Angular routing (refreshing the page)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
