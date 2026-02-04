@@ -1,4 +1,8 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  provideBrowserGlobalErrorListeners,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -9,6 +13,8 @@ import { carReducer } from './store/cars/cars.reducer';
 import * as carEffects from './store/cars/cars.effects';
 import * as brandEffects from './store/brands/brands.effects';
 import { brandReducer } from './store/brands/brands.reducer';
+import * as authEffects from './store/auth/auth.effects';
+import { AuthReducer } from './store/auth/auth.reducer';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -18,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideStore(),
     provideState('cars', carReducer),
     provideState('brands', brandReducer),
-    provideEffects(carEffects),
-    provideEffects(brandEffects)
-]
+    provideState('auth', AuthReducer),
+    provideEffects(carEffects, brandEffects, authEffects),
+  ],
 };
