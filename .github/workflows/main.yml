@@ -35,3 +35,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/car-rental-agency:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/car-rental-agency:${{ github.sha }}
+
+# test github actions
