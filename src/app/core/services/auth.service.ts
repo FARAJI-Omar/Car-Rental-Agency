@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable, signal } from "@angular/core";
 import { AuthRequest , User , LoginResponseDto } from "../models/user.model";
-import { map, Observable } from "rxjs";
+import { map, Observable, tap } from "rxjs";
 
 @Injectable({
     providedIn: 'root'  
@@ -18,6 +18,8 @@ export class AuthService {
         return this.http.post<LoginResponseDto>(`${this.baseUrl}/login`,authRequest)
         .pipe(
             map((response) => ({
+                
+                
                 user : {
                     id: response.id,
                     name : response.username,
@@ -25,7 +27,10 @@ export class AuthService {
                     accessToken : response.accessToken,
                     refreshToken : response.refreshToken
                 }
-            }) )
+            }) ),
+            tap((response) => {
+                console.log(response);
+            })
         );
     }
 
