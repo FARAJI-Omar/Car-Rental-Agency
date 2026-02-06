@@ -16,7 +16,9 @@ export const routes: Routes = [
     },
     {
         path: 'cars',
-        component: Main
+        loadComponent() {
+            return import('./shared/layout/main/main').then(m => m.Main);
+        },
     },
     {
         path: 'car/:id',

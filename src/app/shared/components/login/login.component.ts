@@ -9,11 +9,12 @@ import {
   selectIsAuthenticated,
   isLoadingState,
 } from '../../../store/auth/auth.selectors';
+import { Navbar } from "../navbar/navbar";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, Navbar],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
